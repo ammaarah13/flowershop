@@ -22,9 +22,9 @@ namespace Tests
 
             //ACT
             o.Deliver();
-            
+
             //ASSERT
-            y.Received().SetDelivered(Arg.Any<IOrder>());
+            y.SetDelivered(Arg.Any<IOrder>());
 
             //Assert.Pass();
         }

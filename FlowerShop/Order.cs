@@ -52,7 +52,9 @@ namespace FlowerShop
 
         public void Deliver()
         {
-            throw new NotImplementedException();
+            isDelivered = true;
+            
+            //throw new NotImplementedException();
         }
     }
 }
