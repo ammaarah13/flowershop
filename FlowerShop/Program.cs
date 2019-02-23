@@ -6,7 +6,7 @@ namespace FlowerShop
     {
         static void Main(string[] args)
         {
-       
+
         }
     }
 }

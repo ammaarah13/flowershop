@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using NSubstitute;
+using System.Collections.Generic;
 using FlowerShop;
 
 namespace Tests
@@ -25,6 +26,29 @@ namespace Tests
 
             //ASSERT
             y.SetDelivered(Arg.Any<IOrder>());
+
+            //Assert.Pass();
+        }
+
+        public void Test2()
+        {
+            //ARRANGE
+            IClient c = Substitute.For<IClient>();
+            IOrderDAO y = Substitute.For<IOrderDAO>();
+            IFlowerDAO f = Substitute.For<IFlowerDAO>();
+            Flower ff = new Flower (f, "daisy", 60, 6);
+            List<Flower> fl = new List <Flower>();
+            fl.Add(ff);
+            IOrder o = new Order(y, c, false);
+
+            //ACT
+            double price = o.Price;
+
+            //ASSERT
+            //y.Price(Arg.Any<IOrder>())
+            //o.Price = 72;
+            Assert.AreEqual(o.Price, 72);
+            
 
             //Assert.Pass();
         }
