@@ -19,6 +19,7 @@ namespace FlowerShop
                     cost = flowers[i].Cost + cost;
                 }
                 return cost + (cost * 20 / 100);
+                //return 0;
             }
         }
 
